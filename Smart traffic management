@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class SmartTrafficManagement {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter traffic density (Low / Medium / High): ");
+        String traffic = sc.nextLine();
+
+        if (traffic.equalsIgnoreCase("High")) {
+            System.out.println("Traffic is HIGH");
+            System.out.println("Green signal time: 60 seconds");
+        } 
+        else if (traffic.equalsIgnoreCase("Medium")) {
+            System.out.println("Traffic is MEDIUM");
+            System.out.println("Green signal time: 40 seconds");
+        } 
+        else if (traffic.equalsIgnoreCase("Low")) {
+            System.out.println("Traffic is LOW");
+            System.out.println("Green signal time: 20 seconds");
+        } 
+        else {
+            System.out.println("Invalid input");
+        }
+
+        sc.close();
+    }
+}
